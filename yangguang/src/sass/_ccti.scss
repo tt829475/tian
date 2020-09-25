@@ -1,0 +1,139 @@
+        @charset "UTF-8";
+        @mixin size($w, $h, $b) {
+            width: $w;
+            height: $h;
+            background: $b;
+        }
+        
+        @mixin flexbox($a, $b, $c, $d) {
+            display: $a;
+            flex-direction: $b;
+            justify-content: $c;
+            align-items: $d;
+        }
+        
+        @mixin style($s, $a, $f, $c, $l) {
+            font-size: $s;
+            text-align: $a;
+            font-family: $f;
+            color: $c;
+            line-height: $l;
+        }
+        
+        @mixin border($s, $r, $b, $l) {
+            border-top: $s;
+            border-right: $r;
+            border-bottom: $b;
+            border-left: $l;
+        }
+        
+        @mixin border-color($s, $c) {
+            border-style: $s;
+            border-color: $c;
+            border-style: solid;
+        }
+        
+        #ccti {
+            width: 100%;
+            color: #fff;
+            @include flexbox(flex, column, center, center);
+            .cctii {
+                width: 100%;
+                @include border(1px, 0, 1px, 0);
+                @include border-color(solid, #e3e3e3);
+                @include flexbox(flex, column, center, center);
+                .warpper {
+                    @include flexbox(flex, row, center, center);
+                    @include size(1000px, 86px, 0);
+                    i {
+                        @include size(250px, 86px, 0);
+                        background: url(../img/cti.png) no-repeat;
+                        display: block;
+                    }
+                }
+            }
+            .proclamation {
+                width: 100%;
+                color: #fff;
+                // overflow: hidden;
+                @include flexbox(flex, row, center, center);
+                width: 1200px;
+                .wapper {
+                    @include flexbox(flex, row, center, center);
+                    .notice {
+                        @include size(300px, 134px, 0);
+                        border-right: 1px solid #eaeaea;
+                        margin: 25px 0 25px 2%;
+                        .title {
+                            p {
+                                @include flexbox(flex, row, flex-start, center);
+                                @include style(16px, center, " Arial, Helvetica, sans-serif", #666, 20px);
+                                padding: 5px 5px 5px 20px;
+                                margin: 0px 0 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .content-news {
+            @include flexbox(flex, row, flex-start, center);
+            height: 100px;
+            // overflow: hidden;
+            ul {
+                list-style: none;
+                padding: 0px 6px 0px 15px;
+                li {
+                    @include size(250px, 24px, 0);
+                    line-height: 24px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    a {
+                        color: #999;
+                    }
+                }
+            }
+        }
+        
+        .link {
+            @include flexbox(flex, row, flex-start, flex-start);
+            font-family: "Arial, Helvetica, sans-serif";
+            width: 823px;
+            float: left;
+            font-size: 0;
+            word-spacing: -1px;
+            white-space: nowrap;
+            padding: 20px 0%;
+            margin-left: 50px;
+            overflow: hidden;
+            list-style: none;
+            li {
+                font-size: 12px;
+                vertical-align: top;
+                display: inline-block;
+                width: 20%;
+                dl {
+                    display: block;
+                    width: 90%;
+                    dt {
+                        @include style(16px, center, "Arial, Helvetica, sans-serif", #666, 20px);
+                        padding: 5px;
+                        margin: 5px 0;
+                    }
+                    dd {
+                        @include style(12px, center, "Arial, Helvetica, sans-serif", null, 20px);
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        display: block;
+                        clear: both;
+                        padding: 2px 5px;
+                        overflow: hidden;
+                        a {
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }

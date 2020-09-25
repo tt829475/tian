@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@mixin size($w, $h, $b) {
+    width: $w;
+    height: $h;
+    background: $b;
+}
+
+@mixin flexbox($a, $b, $c, $d) {
+    display: $a;
+    flex-direction: $b;
+    justify-content: $c;
+    align-items: $d;
+}
+
+@mixin style($s, $a, $f, $c, $l) {
+    font-size: $s;
+    text-align: $a;
+    font-family: $f;
+    color: $c;
+    line-height: $l;
+}
+
+#footer {
+    @include size(100%, 224px, #343a3a);
+    @include flexbox(flex, column, center, center);
+}
+
+.wrapper {
+    @include size(1210px, 204px, #343a3a);
+    p {
+        @include size(1210px, 33px, 0);
+        word-spacing: 5px;
+        padding: 15px 0 0;
+        @include flexbox(flex, row, center, center);
+        a {
+            @include style(12px, center, "微软雅黑", #eeeeee, 16px);
+            margin: 0 5px;
+        }
+        span {
+            @extend a;
+        }
+        color: #eeeeee;
+    }
+    .footer-img {
+        @include size(520px, 81px, 0);
+        padding: 20px 0 10px;
+        width: 32.5rem;
+        margin: 0 auto;
+        overflow: hidden;
+        @include flexbox(flex, row, space-between, center);
+        li {
+            width: 108px;
+            height: 40px;
+            background: url(../img/yangguang-footer.png)no-repeat;
+        }
+        li:nth-child(2) {
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+            a {
+                width: 108px;
+                height: 40px;
+                img {
+                    position: absolute;
+                    left: -123px;
+                }
+            }
+            a:hover img {
+                left: -245px;
+                transition: 1s;
+            }
+        }
+        li:nth-child(3) {
+            background-position: -367px 0;
+        }
+        li:nth-child(4) {
+            background-position: -489px 0;
+        }
+    }
+}

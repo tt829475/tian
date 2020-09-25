@@ -1,0 +1,13 @@
+@charset "UTF-8";
+#header {
+    width: 100%;
+    height: 187px;
+    background: chocolate;
+}
+
+@mixin flexbox($a, $b, $c, $d) {
+    display: $a;
+    flex-direction: $b;
+    justify-content: $c;
+    align-items: $d;
+}

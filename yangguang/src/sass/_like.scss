@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@mixin size($w, $h, $b) {
+    width: $w;
+    height: $h;
+    background: $b;
+}
+
+@mixin flexbox($a, $b, $c, $d) {
+    display: $a;
+    flex-direction: $b;
+    justify-content: $c;
+    align-items: $d;
+}
+
+@mixin style($s, $a, $f, $c, $l) {
+    font-size: $s;
+    text-align: $a;
+    font-family: $f;
+    color: $c;
+    line-height: $l;
+}
+
+@mixin border($s, $r, $b, $l) {
+    border-top: $s;
+    border-right: $r;
+    border-bottom: $b;
+    border-left: $l;
+}
+
+@mixin border-color($s, $c) {
+    border-style: $s;
+    border-color: $c;
+}
+
+#like {
+    @include size(100%, 1355px, #f2f2f2);
+    @include flexbox(flex, column, center, center);
+    .like-nner {
+        @include style(24px, center, null, null, 35px);
+        // overflow: hidden;
+        height: 35px;
+        padding: 0 0 20px;
+        background: rgba(0, 0, 0, 0) url(../img/下载.png) repeat-x scroll 0 18px;
+    }
+    .like-inner {
+        width: 1210px;
+        overflow: hidden;
+        .like-list {
+            @include flexbox(flex, row, center, center);
+            flex-wrap: wrap;
+            margin-left: -10px;
+            list-style: none;
+        }
+    }
+}
+
+.like-goods {
+    // @include flexbox(flex, row, center, center);
+    @include size(234px, 315px, gold);
+    margin: 0 0 10px 10px;
+}
