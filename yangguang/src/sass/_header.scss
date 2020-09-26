@@ -1,8 +1,8 @@
 @charset "UTF-8";
-#header {
-    width: 100%;
-    height: 187px;
-    background: chocolate;
+@mixin size($w, $h, $b) {
+    width: $w;
+    height: $h;
+    background: $b;
 }
 
 @mixin flexbox($a, $b, $c, $d) {
@@ -10,4 +10,259 @@
     flex-direction: $b;
     justify-content: $c;
     align-items: $d;
+}
+
+@mixin style($s, $a, $f, $c, $l) {
+    font-size: $s;
+    text-align: $a;
+    font-family: $f;
+    color: $c;
+    line-height: $l;
+}
+
+@mixin border($s, $r, $b, $l) {
+    border-top: $s;
+    border-right: $r;
+    border-bottom: $b;
+    border-left: $l;
+}
+
+@mixin border-color($s, $c) {
+    border-style: $s;
+    border-color: $c;
+}
+
+@mixin margin($s, $r, $b, $l) {
+    margin-top: $s;
+    margin-right: $r;
+    margin-bottom: $b;
+    margin-left: $l;
+}
+
+@mixin padding($s, $r, $b, $l) {
+    padding-top: $s;
+    padding-right: $r;
+    padding-bottom: $b;
+    padding-left: $l;
+}
+
+#header {
+    @include flexbox(flex, column, center, center);
+    @include size(100%, null, null);
+    z-index: 999;
+    .he-top {
+        @include size(100%, 36px, #F5F5F5);
+        @include flexbox(flex, row, center, center);
+        @include border(1px, 1px, 1px, 1px);
+        @include border-color(solid, #E5E5E5);
+        .he-warpper {
+            @include flexbox(flex, row, space-between, center);
+            @include size(1210px, 35px, null);
+            .ar {
+                position: relative;
+            }
+        }
+    }
+}
+
+.ar1 {
+    @include flexbox(flex, row, flex-start, center);
+    @include size(98px, 100%, null);
+    @include padding(0, 9px, 1px, 9px);
+    @include margin(1px, 1px, 0, 1px);
+    white-space: nowrap;
+    line-height: 34px;
+    position: relative;
+    z-index: 10;
+    .lle {
+        @include size(7px, 4px, null);
+        @include margin(5px, 0, 0, 10px);
+        color: #555;
+        background: url(../img/web_common_pic.png) no-repeat;
+        background-position: -110px -60px;
+        display: block;
+        margin-left: 10px;
+    }
+}
+
+.ar2 {
+    @include size(280px, null, #FFF);
+    @include padding(5px, 5px, 5px, 5px);
+    @include flexbox(flex, row, flex-start, center);
+    flex-wrap: wrap;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    display: none;
+    a {
+        @include style(12px, center, null, #666, 20px);
+        @include size(25%, 20px, #fff);
+        @include padding(0, 2%, 0, 2%);
+        text-align: start;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+}
+
+.ar:hover .ar2 {
+    display: flex;
+}
+
+.ar:hover .ar1 .icon {
+    background-position: -60px 0;
+}
+
+.ar:hover .ar1 .lle {
+    transform: rotate(180deg);
+    transition: 1s;
+}
+
+.hello {
+    @include flexbox(flex, row, center, center);
+    li {
+        @include padding(0, 10px, 0, 10px);
+        a {
+            @include flexbox(flex, row, center, center);
+            i {
+                @include size(7px, 4px, null);
+                @include margin(5px, 0, 0, 10px);
+                color: #555;
+                background: url(../img/web_common_pic.png) no-repeat;
+                background-position: -110px -60px;
+                display: block;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.icon {
+    @include size(20px, 20px, null);
+    @include margin(4px, 4px, 4px, 4px);
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/web_common_pic.png) no-repeat;
+    background-position: -40px 0;
+}
+
+.he-center {
+    @include flexbox(flex, row, center, center);
+    @include size(100%, 109px, #FFF);
+    // z-index: 100;
+    .he-center-war {
+        @include flexbox(flex, row, flex-start, flex-start);
+        @include size(1210px, 109px, null);
+        margin: auto;
+        .site-logo {
+            @include size(240px, 68px, null);
+            @include margin(22px, 120px, auto, 0);
+        }
+    }
+}
+
+.search {
+    @include margin(10px, 0, 0, 0);
+    width: 550px;
+    .search1 {
+        @include flexbox(flex, row, flex-start, flex-start);
+        @include size(550px, 36px, null);
+        @include border(1px, 1px, 1px, 1px);
+        @include border-color(solid, #F30213);
+        margin-top: 24px;
+        input {
+            @include border(2px, 0, 2px, 2px);
+            @include border-color(solid, #F30213);
+            @include size(460px, 34px, null);
+            @include padding( 4px, 4px, 4px, 4px);
+            line-height: 24px;
+            color: #555;
+        }
+        .submit {
+            @include size(88px, 34px, #F30213);
+            @include style(16px, center, null, #FFF, 36px);
+            font-weight: 500;
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+.search2 {
+    @include flexbox(flex, row, flex-start, flex-start);
+    @include size(100%, 20px, null);
+    line-height: 20px;
+    white-space: nowrap;
+    margin-top: 5px;
+    overflow: hidden;
+    li {
+        @include style(12px, top, null, #999, 12px);
+        @include margin(5px, 12px, 0, 0);
+        font-size: 12px;
+        vertical-align: top;
+        letter-spacing: normal;
+        word-spacing: normal;
+        display: inline-block;
+    }
+}
+
+.cart {
+    @include size(140px, 36px, #fff);
+    @include border(1px, 1px, 1px, 1px);
+    @include border-color(solid, #ddd);
+    // z-index: 11;
+    height: 36px;
+    margin-top: 34px;
+    margin-left: 30px;
+    .car1 {
+        @include flexbox(flex, row, center, center);
+        @include size(null, 36px, #f9f9f9);
+        @include border(1px, 1px, 1px, 1px);
+        @include border-color(solid, #DFDFDF);
+        @include padding(0, 28px, 0, 19px);
+        line-height: 34px;
+        b {
+            @include size(16px, 16px, null);
+            overflow: hidden;
+            margin-left: 10px;
+            background: url(../img/web_common_pic.png) no-repeat 0 -30px;
+        }
+        a {
+            color: #F30213;
+        }
+    }
+}
+
+.he-bottom {
+    @include flexbox(flex, row, center, center);
+    @include size(100%, 40px, #FFF);
+    @include border(0, 0, 2px, 0);
+    @include border-color(solid, #F30213);
+    @include margin(0, auto, 0, auto);
+    // z-index: 99;
+    .he-bottom1 {
+        width: 1210px;
+        @include flexbox(flex, row, flex-start, flex-start);
+        .he-bottom2 {
+            @include flexbox(flex, row, center, center);
+            @include size(180px, 40px, #F30213);
+        }
+    }
+}
+
+.tit {
+    @include size(180px, 41px, null);
+    @include flexbox(flex, row, space-between, center);
+    @include padding(10px, 10px, 11px, 10px);
+    height: 20px;
+    a {
+        @include style(14px, null, null, #FFF, 20px);
+        margin-left: 6px;
+    }
+    .arrow-down {
+        @include size(9px, 6px, null);
+        @include margin(8px, 6px, 0, 0);
+        background: url(../img/web_common_pic.png) no-repeat -90px -60px;
+    }
 }

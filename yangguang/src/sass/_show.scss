@@ -1,6 +1,319 @@
-@charset "UTF-8";
-#show {
-    width: 100%;
-    height: 1261px;
-    background: crimson;
-}
+        @charset "UTF-8";
+        @mixin size($w, $h, $b) {
+            width: $w;
+            height: $h;
+            background: $b;
+        }
+        
+        @mixin flexbox($a, $b, $c, $d) {
+            display: $a;
+            flex-direction: $b;
+            justify-content: $c;
+            align-items: $d;
+        }
+        
+        @mixin style($s, $a, $f, $c, $l) {
+            font-size: $s;
+            text-align: $a;
+            font-family: $f;
+            color: $c;
+            line-height: $l;
+        }
+        
+        @mixin border($s, $r, $b, $l) {
+            border-top: $s;
+            border-right: $r;
+            border-bottom: $b;
+            border-left: $l;
+        }
+        
+        @mixin border-color($s, $c) {
+            border-style: $s;
+            border-color: $c;
+        }
+        
+        @mixin margin($s, $r, $b, $l) {
+            margin-top: $s;
+            margin-right: $r;
+            margin-bottom: $b;
+            margin-left: $l;
+        }
+        
+        @mixin padding($s, $r, $b, $l) {
+            padding-top: $s;
+            padding-right: $r;
+            padding-bottom: $b;
+            padding-left: $l;
+        }
+        
+        #show {
+            @include size(100%, null, #f2f2f2);
+            @include flexbox(flex, column, center, center);
+            @include margin(15px, 0, 30px, 0);
+            .seckill-box {
+                @include margin(0, auto, 0, auto);
+                width: 1210px;
+                // overflow: hidden;
+                .seckill-title {
+                    @include flexbox(flex, row, space-between, center);
+                    @include style(null, null, null, #fff, 55px);
+                    @include padding(0, 20px, 0, 30px);
+                    position: relative;
+                    height: 55px;
+                    background: green;
+                }
+            }
+        }
+        
+        .title {
+            @include flexbox(flex, row, center, center);
+            i {
+                @include size(34px, 36px, null);
+                // @include margin(10px, 15px, 0, 0);
+                background: hotpink;
+                background-position: 0 -48px;
+            }
+            h3 {
+                @include style(26px, center, null, #fff, 36px);
+                margin-left: 20px;
+                height: 36px;
+                font-weight: 300;
+            }
+            a {
+                @include style(14px, center, null, #fff, 24px);
+                height: 24px;
+                margin-left: 12px;
+                font-weight: 400;
+            }
+        }
+        
+        .countdown {
+            @include flexbox(flex, row, center, center);
+            .tip {
+                @include style(14px, center, null, #fff, 45px);
+                padding-top: 10px;
+            }
+            .timer {
+                @include style(20px, center, null, #440106, 2px);
+                @include padding(0, 8px, 0, 6px);
+                margin-top: 8px;
+                font-weight: 600;
+                .m {
+                    @include border(1px, 1px, 1px, 1px);
+                    @include border-color(solid, #000);
+                    @include padding(5px, 5px, 5px, 5px);
+                    @include margin(0, 4px, 0, 4px);
+                    background-color: #000;
+                    color: #f90013;
+                    border-radius: 4px;
+                    font-weight: 400;
+                }
+                .h {
+                    @extend .m;
+                }
+                .s {
+                    @extend .m;
+                }
+            }
+        }
+        
+        .seckill-content {
+            @include padding(12px, 0, 13px, 0);
+            @include margin(0, 2px, 0, 2px);
+            @include size(null, null, #fff);
+            overflow: hidden;
+            .wrapper {
+                @include size(1206px, 250px, red);
+                @include margin(0, auto, 0, auto);
+            }
+        }
+        
+        .food {
+            @include flexbox(flex, column, center, center);
+            @include margin(15px, auto, 0, auto);
+            // overflow: hidden;
+            font-family: "microsoft yahei";
+            .floor {
+                @include flexbox(flex, column, center, center);
+                width: 100%;
+                .coll {
+                    @include flexbox(flex, column, flex-start, flex-start);
+                    @include size(1210px, 478px, #fff);
+                    overflow: hidden;
+                    .header {
+                        @include flexbox(flex, row, flex-start, center);
+                        @include size(1210px, 58px, #edba21);
+                        @include padding(16px, 20px, 16px, 25px);
+                        background-image: linear-gradient(90deg, #edba21, #e19631);
+                        h3 {
+                            @include size(100px, 26px, null);
+                            @include flexbox(flex, row, flex-start, center);
+                            @include style(22px, center, null, #fff, 30px);
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .warpper {
+            @include flexbox(flex, row, center, center);
+            @include padding(10px, 10px, 10px, 10px);
+            background-color: #FFF;
+            overflow: hidden;
+            .co {
+                @include flexbox(flex, column, flex-start, center);
+                width: 580px;
+                overflow: hidden;
+                .coo {
+                    @include flexbox(flex, row, flex-start, flex-start);
+                    @include margin(0, 10px, 0, 0);
+                    .cover {
+                        @include flexbox(flex, row, flex-start, flex-start);
+                        @include size(186px, 260px, #F7F7F7);
+                        @include margin(0, 10px, 0, 0);
+                        ;
+                    }
+                    .split {
+                        @include flexbox(flex, row, flex-start, flex-start);
+                        flex-wrap: wrap;
+                        @include size(382px, 260px, null);
+                        a {
+                            // @include flexbox(flex, row, center, center);
+                            @include size(191px, 130px, #edba21);
+                        }
+                        a:nth-child(2) {
+                            @include size(191px, 130px, #eeeeee);
+                            @include border(0, 0, 1px, 1px);
+                            @include border-color(solid, #E6E6E6);
+                        }
+                        a:nth-child(3) {
+                            @include size(191px, 130px, rgb(112, 66, 66));
+                            @include border(1px, 1px, 0, 0);
+                        }
+                        a:nth-child(4) {
+                            @extend a;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .more {
+            @include flexbox(flex, row, center, center);
+            @include size(null, 130px, null);
+            @include padding(10px, 0, 0, 0);
+            a {
+                @include flexbox(flex, row, center, center);
+                @include size(186px, 130px, #F7F7F7);
+                @include margin(0, 10px, 0, 0);
+            }
+        }
+        
+        .hygiene {
+            @include flexbox(flex, column, flex-start, center);
+            @include size(579px, null, null);
+            @include margin(0, 0, 0, 15px);
+            @include padding(0, 0, 0, 15px);
+            @include border(0, 0, 0, 1px);
+            @include border-color(solid, #E6E6E6);
+            overflow: hidden;
+            .drinks {
+                @extend .more;
+            }
+        }
+        
+        .produce {
+            @include flexbox(flex, row, center, center);
+            @include size(null, 260px, #F7F7F7);
+            @include margin(0, 10px, 0, 0);
+            .pro-left {
+                @include flexbox(flex, row, flex-start, flex-start);
+                @include size(186px, 260px, hotpink);
+                @include margin(0, 10px, 0, 0);
+                ;
+                // background: ;
+            }
+            .pro-center {
+                @extend .pro-left;
+                background: indigo;
+            }
+            .pro-right {
+                @extend .pro-left;
+                background: lightseagreen;
+            }
+        }
+        
+        .life {
+            @include size(1210px, null, null);
+            @include flexbox(flex, row, center, center);
+            @include margin(15px, auto, 0, auto);
+            overflow: hidden;
+            font-family: "microsoft yahei";
+            .life-left {
+                @include size(600px, null, blue);
+                @include margin(0, 10px, 0, 0);
+                overflow: hidden;
+                .life-header {
+                    @include size(null, 58px, #cd375e);
+                    @include padding(16px, 20px, 16px, 25px);
+                    background-image: linear-gradient(90deg, #cd375e, #c1314d);
+                    h3 {
+                        @include size(100px, 26px, null);
+                        @include flexbox(flex, row, center, flex-start);
+                        @include style(22px, center, null, #fff, 30px);
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        
+        .life-title {
+            @include flexbox(flex, column, center, center);
+            @include padding(10px, 10px, 1px, 10px);
+            background-color: #FFF;
+            overflow: hidden;
+            .life-warpper {
+                @include flexbox(flex, row, center, center);
+                .life-1 {
+                    @include flexbox(flex, row, center, center);
+                    @include size(186px, 260px, #F7F7F7);
+                    @include margin(0, 10px, 0, 0);
+                }
+                .life-2 {
+                    @extend .life-1;
+                    @include flexbox(flex, column, center, center);
+                    a:nth-child(1) {
+                        @include size(191px, 130px, red);
+                        @include border(0, 0, 1px, 0);
+                        @include border-color(solid, #000)
+                    }
+                    a:nth-child(2) {
+                        @include size(191px, 130px, red);
+                        @include border(0, 0, 1px, 0);
+                    }
+                }
+            }
+        }
+        
+        .life-inner {
+            @include flexbox(flex, row, center, center);
+            overflow: hidden;
+            height: 130px;
+            padding-top: 10px;
+            clear: both;
+            a {
+                overflow: hidden;
+                @include size(186px, 130px, #F7F7F7);
+                @include margin(0, 10px, 0, 0);
+            }
+        }
+        
+        .life-center {
+            @extend .life-left;
+            background-image: linear-gradient(90deg, #974676, #9e4075);
+        }
+        
+        .life-right {
+            @extend .life-left;
+        }
