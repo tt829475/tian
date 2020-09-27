@@ -1,10 +1,11 @@
 @charset "UTF-8";
 @import "header";
-@import "nav";
+@import "banner";
 @import "show";
 @import "ccti";
 @import "footer";
 @import "like";
+@import "nav";
 .container {
     display: flex;
     flex-direction: column;

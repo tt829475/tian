@@ -251,6 +251,26 @@
     }
 }
 
+.he-bottom4 {
+    @include flexbox(flex, row, center, center);
+    max-width: 988px;
+    li {
+        @include flexbox(flex, row, center, center);
+        height: 36px;
+        vertical-align: top;
+        display: inline-block;
+        a {
+            @include style(15px, center, null, #333, 36px);
+            height: 20px;
+            padding: 8px 24px;
+            font-weight: 600;
+        }
+        .aa {
+            color: #F30213;
+        }
+    }
+}
+
 .tit {
     @include size(180px, 41px, null);
     @include flexbox(flex, row, space-between, center);

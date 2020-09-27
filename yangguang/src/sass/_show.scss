@@ -68,21 +68,21 @@
         .title {
             @include flexbox(flex, row, center, center);
             i {
-                @include size(34px, 36px, null);
+                @include size(80px, 36px, null);
                 // @include margin(10px, 15px, 0, 0);
-                background: hotpink;
+                background: url(../img/active.png)no-repeat;
                 background-position: 0 -48px;
             }
             h3 {
                 @include style(26px, center, null, #fff, 36px);
-                margin-left: 20px;
+                margin-left: -53px;
                 height: 36px;
                 font-weight: 300;
             }
             a {
                 @include style(14px, center, null, #fff, 24px);
-                height: 24px;
-                margin-left: 12px;
+                @include size(182px, 24px, null);
+                margin-left: -36px;
                 font-weight: 400;
             }
         }
@@ -122,9 +122,43 @@
             @include margin(0, 2px, 0, 2px);
             @include size(null, null, #fff);
             overflow: hidden;
-            .wrapper {
-                @include size(1206px, 250px, red);
+            position: relative;
+            .bx-prev {
+                @include size(28px, 62px, rgba(0, 0, 0, 0.2));
+                @include style(22px, center, simsun, #FFF, 62px);
+                position: absolute;
+                top: 50%;
+                outline: 0;
+                z-index: 9999;
+                margin-top: -31px;
+                font-weight: 400;
+                display: none;
+            }
+            .bx-next {
+                @extend .bx-prev;
+                right: 0;
+            }
+            .wrapp {
+                @include flexbox(flex, row, flex-start, center);
+                @include size(1206px, 250px, null);
                 @include margin(0, auto, 0, auto);
+                flex-wrap: nowrap;
+                // overflow: hidden;
+                position: relative;
+                left: 0px;
+                li {
+                    @include size(170px, 225px, null);
+                    list-style: none;
+                    padding: 0 15px;
+                    border-left: 1px solid #e7e7e7;
+                    @include flexbox(flex, row, center, center);
+                    flex-wrap: wrap;
+                    img {
+                        width: 170px;
+                        height: 180px;
+                        display: block;
+                    }
+                }
             }
         }
         

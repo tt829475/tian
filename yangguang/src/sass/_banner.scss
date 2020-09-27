@@ -1,0 +1,220 @@
+@charset "UTF-8";
+@mixin size($w, $h, $b) {
+    width: $w;
+    height: $h;
+    background: $b;
+}
+
+@mixin flexbox($a, $b, $c, $d) {
+    display: $a;
+    flex-direction: $b;
+    justify-content: $c;
+    align-items: $d;
+}
+
+@mixin style($s, $a, $f, $c, $l) {
+    font-size: $s;
+    text-align: $a;
+    font-family: $f;
+    color: $c;
+    line-height: $l;
+}
+
+@mixin border($s, $r, $b, $l) {
+    border-top: $s;
+    border-right: $r;
+    border-bottom: $b;
+    border-left: $l;
+}
+
+@mixin border-color($s, $c) {
+    border-style: $s;
+    border-color: $c;
+}
+
+@mixin margin($s, $r, $b, $l) {
+    margin-top: $s;
+    margin-right: $r;
+    margin-bottom: $b;
+    margin-left: $l;
+}
+
+@mixin padding($s, $r, $b, $l) {
+    padding-top: $s;
+    padding-right: $r;
+    padding-bottom: $b;
+    padding-left: $l;
+}
+
+#banner {
+    @include size(100%, 479px, #c5000c);
+    position: relative;
+    ul {
+        @include size(180px, 100%, #6e6568);
+        @include padding(19px, 0, 19px, 0);
+        position: absolute;
+        left: calc(50% - 605px);
+        top: 0;
+        li {
+            @include size(100%, 34px, #6e6568);
+            padding-left: 12px;
+            color: #fff;
+            a {
+                @include style(14px, start, null, #fff, 34px);
+                padding: 0 3px;
+            }
+        }
+    }
+}
+
+.sinatv {
+    @include size(100%, 79px, #fff);
+    .sinatv-le {
+        @include size(866px, 79px, null);
+        margin-left: 235px;
+        float: left;
+    }
+    .sinatv-ri {
+        @include size(167px, 79px, null);
+        float: left;
+    }
+}
+
+.sinatv-le1 {
+    @include size(408px, 68px, null);
+    border: 1px solid #e4e4e4;
+    padding: 5px 0px 5px 0px;
+    margin: 5px 6px 5px 15px;
+    position: relative;
+    float: left;
+    .img1 {
+        @include size(50%, 59px, null);
+        margin-left: 5px;
+        position: absolute;
+        left: 2px;
+        overflow: hidden;
+        float: left;
+    }
+    .sinatv-le3 {
+        @include flexbox(flex, row, flex-start, flex-start);
+        @include size(290px, 59px, null);
+        left: 100px;
+        float: left;
+        position: relative;
+        .img2 {
+            @include size(90px, 59px, null);
+            margin-left: 15px;
+        }
+    }
+}
+
+.goods {
+    width: 175px;
+    margin-left: 6px;
+    p {
+        @include size(100%, 24px, null);
+        line-height: 24px;
+        text-overflow: ellipsis;
+        a {
+            color: #333;
+        }
+    }
+    .goods1 {
+        width: 50%;
+        color: #f15c18;
+        margin-top: 5px;
+        em {
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+    .goto {
+        @include size(84px, 22px, null);
+        @include style(null, center, null, #f22d25, 21px);
+        position: absolute;
+        right: -4px;
+        bottom: 4px;
+        border: 1px solid #f22d25;
+        box-shadow: 1px 1px 2px #e3d5d5;
+    }
+}
+
+.sinatv-le2 {
+    @include size(408px, 68px, null);
+    border: 1px solid #e4e4e4;
+    padding: 5px 0px 5px 0px;
+    position: relative;
+    float: left;
+    margin: 5px 15px 5px 10px;
+    overflow: hidden;
+    @extend .sinatv-le1;
+    .img3 {
+        position: absolute;
+        left: -97px;
+    }
+}
+
+.picture {
+    @include size(100%, 400px, #c5000c);
+    .pic {
+        @include size(790px, 400px, null);
+        display: block;
+        text-indent: -9999px;
+        margin-left: -395px;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+    }
+}
+
+.right-bar {
+    height: 400px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    right: 50%;
+    margin-right: -607px;
+    top: 79px;
+    z-index: 10;
+    h2 {
+        @include style(16px, center, null, #000, 30px);
+        height: 30px;
+        padding: 12px 0;
+        font-weight: bold;
+    }
+    .right-max {
+        @include size(185px, 346px, null);
+        float: right;
+        .img5 {
+            width: 185px;
+            margin-top: 30px;
+        }
+    }
+}
+
+h3 {
+    @include style(null, center, null, #000, 24px);
+    @include size(100%, 24px, null);
+    font-weight: bold;
+}
+
+.p1 {
+    height: 40px;
+    line-height: 20px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.cartlist {
+    position: absolute;
+    left: 250px;
+    top: 0;
+    width: 998px;
+    min-height: 468px;
+    border: 1px solid #f7f7f7;
+    background-color: #e5e5e5;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, .3); */
+    display: none;
+    transition: top .3s ease;
+    z-index: 10;
+}
