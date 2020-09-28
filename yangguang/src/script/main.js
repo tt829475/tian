@@ -31,6 +31,12 @@ require(['jquery', 'jcookie', 'jlazyload'], function() {
     // //2.加载script标签里面约定的模块名。
     require([pagemod], function(page) {
         page.init();
+        page.banner();
+        page.wapp();
+        page.wap();
+        page.timer();
+        page.topp();
+
     })
 
 })

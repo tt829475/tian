@@ -147,6 +147,172 @@
   margin-left: 10px;
 }
 
+.ni {
+  color: #F30213;
+}
+
+.sp, .top1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 87px;
+  height: 106px;
+  background: #FFF;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  top: -109px;
+  opacity: 0;
+  display: block;
+  padding: 10px;
+  left: -1px;
+  border: solid 1px #E5E5E5;
+  border-top: #fff;
+  flex-wrap: wrap;
+}
+.sp .i, .top1 .i {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
+  color: #555;
+  line-height: 24px;
+  display: block;
+  padding: 2px 0 2px 0px;
+}
+
+.order, .serve {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 35px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.order:hover, .serve:hover {
+  background: #fff;
+  border: solid 1px #E5E5E5;
+  border-top: #fff;
+}
+
+.order:hover .sp, .serve:hover .sp, .order:hover .top1, .serve:hover .top1 {
+  display: flex;
+  top: 33px;
+  opacity: 1;
+  transition: .3s ease-out;
+}
+
+.order:hover .i4, .serve:hover .i4 {
+  transform: rotate(180deg);
+  transition: 1s;
+}
+
+.top, .top2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 175px;
+  background: #fff;
+  padding: 10px;
+  position: absolute;
+  left: -1px;
+  z-index: 1;
+  top: -122px;
+  opacity: 0;
+  border: solid 1px #E5E5E5;
+  border-top: #fff;
+  flex-wrap: wrap;
+}
+.top .i1, .top2 .i1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
+  color: #555;
+  line-height: 24px;
+  width: 50%;
+  display: block;
+  clear: both;
+  padding: 2px 0 2px 10px;
+}
+
+.store, .phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 35px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.store:hover, .phone:hover {
+  background: #fff;
+  border: solid 1px #E5E5E5;
+  border-top: #fff;
+}
+
+.store:hover .top, .phone:hover .top, .store:hover .top2, .phone:hover .top2 {
+  display: flex;
+  top: 33px;
+  opacity: 1;
+  transition: .3s ease-out;
+}
+
+.store:hover .i4, .phone:hover .i4 {
+  transform: rotate(180deg);
+  transition: 1s;
+}
+
+.serve:hover {
+  background: #fff;
+  border: solid 1px #E5E5E5;
+  border-top: #fff;
+}
+
+.serve:hover .top1 {
+  display: flex;
+  top: 33px;
+  opacity: 1;
+  transition: .3s ease-out;
+}
+
+.top2 {
+  left: -89px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  top: -210px;
+}
+.top2 img {
+  width: 140px;
+}
+.top2 .i1 {
+  width: 140px;
+}
+
+.phone:hover {
+  background: #fff;
+  border: solid 1px #E5E5E5;
+  border-top: #fff;
+}
+
+.phone:hover .top2 {
+  display: flex;
+  top: 33px;
+  opacity: 1;
+  transition: .3s ease-out;
+}
+
 .icon {
   width: 20px;
   height: 20px;
@@ -648,7 +814,7 @@ h3 {
   padding-left: 30px;
   position: relative;
   height: 55px;
-  background: green;
+  background: url(https://statics.cnrmall.com/web/static/img/active/seckill.png) no-repeat;
 }
 
 .title {
@@ -778,7 +944,7 @@ h3 {
   left: 0px;
 }
 .seckill-content .wrapp li {
-  width: 170px;
+  width: 201px;
   height: 225px;
   list-style: none;
   padding: 0 15px;
@@ -830,7 +996,6 @@ h3 {
   align-items: center;
   width: 1210px;
   height: 58px;
-  background: #edba21;
   padding-top: 16px;
   padding-right: 20px;
   padding-bottom: 16px;
@@ -882,6 +1047,7 @@ h3 {
   margin-left: 0;
 }
 .warpper .co .coo .cover {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -895,6 +1061,7 @@ h3 {
   margin-left: 0;
 }
 .warpper .co .coo .split {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -904,9 +1071,10 @@ h3 {
   height: 260px;
 }
 .warpper .co .coo .split a, .warpper .co .coo .split a:nth-child(4), .warpper .co .coo .split .wrapper p span, .wrapper p .warpper .co .coo .split span {
+  overflow: hidden;
   width: 191px;
   height: 130px;
-  background: #edba21;
+  background: #fff;
 }
 .warpper .co .coo .split a:nth-child(2), .warpper .co .coo .split .wrapper p span:nth-child(2), .wrapper p .warpper .co .coo .split span:nth-child(2) {
   width: 191px;
@@ -922,14 +1090,20 @@ h3 {
 .warpper .co .coo .split a:nth-child(3), .warpper .co .coo .split .wrapper p span:nth-child(3), .wrapper p .warpper .co .coo .split span:nth-child(3) {
   width: 191px;
   height: 130px;
-  background: #704242;
+  background: #fff;
   border-top: 1px;
   border-right: 1px;
   border-bottom: 0;
   border-left: 0;
 }
 
+.im:hover {
+  transform: translateX(-10px);
+  transition: all 1s;
+}
+
 .more, .hygiene .drinks {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -941,6 +1115,7 @@ h3 {
   padding-left: 0;
 }
 .more a, .hygiene .drinks a, .more .warpper .co .coo .split a:nth-child(4), .warpper .co .coo .split .more a:nth-child(4), .hygiene .drinks .warpper .co .coo .split a:nth-child(4), .warpper .co .coo .split .hygiene .drinks a:nth-child(4), .more .wrapper p span, .wrapper p .more span, .hygiene .drinks .wrapper p span, .wrapper p .hygiene .drinks span {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -976,8 +1151,12 @@ h3 {
   border-color: #E6E6E6;
   overflow: hidden;
 }
+.hygiene .drinks {
+  overflow: hidden;
+}
 
 .produce {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -988,21 +1167,24 @@ h3 {
   margin-right: 10px;
   margin-bottom: 0;
   margin-left: 0;
+  overflow: hidden;
 }
 .produce .pro-left, .produce .pro-center, .produce .pro-right {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   width: 186px;
   height: 260px;
-  background: hotpink;
+  background: #fff;
   margin-top: 0;
   margin-right: 10px;
   margin-bottom: 0;
   margin-left: 0;
 }
 .produce .pro-center {
+  overflow: hidden;
   background: indigo;
 }
 .produce .pro-right {
@@ -1024,7 +1206,7 @@ h3 {
 }
 .life .life-left, .life .life-center, .life .life-right {
   width: 600px;
-  background: blue;
+  background: #fff;
   margin-top: 0;
   margin-right: 10px;
   margin-bottom: 0;
@@ -1084,28 +1266,30 @@ h3 {
   margin-right: 10px;
   margin-bottom: 0;
   margin-left: 0;
+  overflow: hidden;
 }
 .life-title .life-warpper .life-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .life-title .life-warpper .life-2 a:nth-child(1), .life-title .life-warpper .life-2 .warpper .co .coo .split a:nth-child(1):nth-child(4), .warpper .co .coo .split .life-title .life-warpper .life-2 a:nth-child(1):nth-child(4), .life-title .life-warpper .life-2 .wrapper p span:nth-child(1), .wrapper p .life-title .life-warpper .life-2 span:nth-child(1) {
   width: 191px;
   height: 130px;
-  background: red;
+  background: #fff;
   border-top: 0;
   border-right: 0;
   border-bottom: 1px;
   border-left: 0;
   border-style: solid;
-  border-color: #000;
+  border-color: #fff;
 }
 .life-title .life-warpper .life-2 a:nth-child(2), .life-title .life-warpper .life-2 .warpper .co .coo .split a:nth-child(2):nth-child(4), .warpper .co .coo .split .life-title .life-warpper .life-2 a:nth-child(2):nth-child(4), .life-title .life-warpper .life-2 .wrapper p span:nth-child(2), .wrapper p .life-title .life-warpper .life-2 span:nth-child(2) {
   width: 191px;
   height: 130px;
-  background: red;
+  background: #fff;
   border-top: 0;
   border-right: 0;
   border-bottom: 1px;
@@ -1566,10 +1750,6 @@ h3 {
   color: #fff;
   line-height: 35px;
   margin-left: 6px;
-}
-
-.tab-ico:hover {
-  background: #C81623;
 }
 
 .tab-ico:hover .nav50 {

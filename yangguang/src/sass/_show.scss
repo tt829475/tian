@@ -60,7 +60,7 @@
                     @include padding(0, 20px, 0, 30px);
                     position: relative;
                     height: 55px;
-                    background: green;
+                    background: url(https://statics.cnrmall.com/web/static/img/active/seckill.png)no-repeat;
                 }
             }
         }
@@ -147,7 +147,7 @@
                 position: relative;
                 left: 0px;
                 li {
-                    @include size(170px, 225px, null);
+                    @include size(201px, 225px, null);
                     list-style: none;
                     padding: 0 15px;
                     border-left: 1px solid #e7e7e7;
@@ -176,7 +176,7 @@
                     overflow: hidden;
                     .header {
                         @include flexbox(flex, row, flex-start, center);
-                        @include size(1210px, 58px, #edba21);
+                        @include size(1210px, 58px, null);
                         @include padding(16px, 20px, 16px, 25px);
                         background-image: linear-gradient(90deg, #edba21, #e19631);
                         h3 {
@@ -203,18 +203,21 @@
                     @include flexbox(flex, row, flex-start, flex-start);
                     @include margin(0, 10px, 0, 0);
                     .cover {
+                        overflow: hidden;
                         @include flexbox(flex, row, flex-start, flex-start);
                         @include size(186px, 260px, #F7F7F7);
                         @include margin(0, 10px, 0, 0);
                         ;
                     }
                     .split {
+                        overflow: hidden;
                         @include flexbox(flex, row, flex-start, flex-start);
                         flex-wrap: wrap;
                         @include size(382px, 260px, null);
                         a {
                             // @include flexbox(flex, row, center, center);
-                            @include size(191px, 130px, #edba21);
+                            overflow: hidden;
+                            @include size(191px, 130px, #fff);
                         }
                         a:nth-child(2) {
                             @include size(191px, 130px, #eeeeee);
@@ -222,7 +225,7 @@
                             @include border-color(solid, #E6E6E6);
                         }
                         a:nth-child(3) {
-                            @include size(191px, 130px, rgb(112, 66, 66));
+                            @include size(191px, 130px, #fff);
                             @include border(1px, 1px, 0, 0);
                         }
                         a:nth-child(4) {
@@ -233,11 +236,18 @@
             }
         }
         
+        .im:hover {
+            transform: translateX(-10px);
+            transition: all 1s;
+        }
+        
         .more {
+            overflow: hidden;
             @include flexbox(flex, row, center, center);
             @include size(null, 130px, null);
             @include padding(10px, 0, 0, 0);
             a {
+                overflow: hidden;
                 @include flexbox(flex, row, center, center);
                 @include size(186px, 130px, #F7F7F7);
                 @include margin(0, 10px, 0, 0);
@@ -253,25 +263,30 @@
             @include border-color(solid, #E6E6E6);
             overflow: hidden;
             .drinks {
+                overflow: hidden;
                 @extend .more;
             }
         }
         
         .produce {
+            overflow: hidden;
             @include flexbox(flex, row, center, center);
             @include size(null, 260px, #F7F7F7);
             @include margin(0, 10px, 0, 0);
             .pro-left {
+                overflow: hidden;
                 @include flexbox(flex, row, flex-start, flex-start);
-                @include size(186px, 260px, hotpink);
+                @include size(186px, 260px, #fff);
                 @include margin(0, 10px, 0, 0);
                 ;
                 // background: ;
             }
             .pro-center {
+                overflow: hidden;
                 @extend .pro-left;
                 background: indigo;
             }
+            overflow: hidden;
             .pro-right {
                 @extend .pro-left;
                 background: lightseagreen;
@@ -285,7 +300,7 @@
             overflow: hidden;
             font-family: "microsoft yahei";
             .life-left {
-                @include size(600px, null, blue);
+                @include size(600px, null, #fff);
                 @include margin(0, 10px, 0, 0);
                 overflow: hidden;
                 .life-header {
@@ -313,17 +328,19 @@
                     @include flexbox(flex, row, center, center);
                     @include size(186px, 260px, #F7F7F7);
                     @include margin(0, 10px, 0, 0);
+                    overflow: hidden;
                 }
                 .life-2 {
                     @extend .life-1;
                     @include flexbox(flex, column, center, center);
+                    overflow: hidden;
                     a:nth-child(1) {
-                        @include size(191px, 130px, red);
+                        @include size(191px, 130px, #fff);
                         @include border(0, 0, 1px, 0);
-                        @include border-color(solid, #000)
+                        @include border-color(solid, #fff)
                     }
                     a:nth-child(2) {
-                        @include size(191px, 130px, red);
+                        @include size(191px, 130px, #fff);
                         @include border(0, 0, 1px, 0);
                     }
                 }
