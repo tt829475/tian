@@ -8,15 +8,15 @@
 
 //模块配置
 require.config({
-    paths: {
+    paths: { //路径
         'jquery': 'https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min',
         'jcookie': 'https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.0/jquery.cookie.min',
         'jlazyload': 'https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.8.3/jquery.lazyload.min'
     },
-    shim: {
+    shim: { //让不支持AMD的模块，支持AMD模块
         'jcookie': {
             deps: ['jquery'], //依赖的模块
-            exports: 'jlazyload' //别名
+            exports: 'jcookie' //别名
         },
         'jlazyload': {
             deps: ['jquery'],
@@ -24,19 +24,12 @@ require.config({
         }
     }
 });
+
 require(['jquery', 'jcookie', 'jlazyload'], function() {
-
     let pagemod = $('#currentpage').attr('data-page');
-
-    // //2.加载script标签里面约定的模块名。
+    //2.加载script标签里面约定的模块名。
     require([pagemod], function(page) {
         page.init();
-        page.banner();
-        page.wapp();
-        page.wap();
-        page.timer();
-        page.topp();
-
     })
 
-})
+});
