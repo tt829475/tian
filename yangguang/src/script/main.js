@@ -33,3 +33,11 @@ require(['jquery', 'jcookie', 'jlazyload'], function() {
     })
 
 });
+// require(['jquery', 'jcookie', 'jlazyload'], function() {
+//     let pagemod = $('#currentpage').attr('data-page'); //通过id名或者内部的自定义属性page-origin的值。
+//     if (page) {
+//         require([pagemod], function(page) {
+//             page.init();
+//         });
+//     }
+// });

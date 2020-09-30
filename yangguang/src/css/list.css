@@ -946,13 +946,270 @@
   background-position: -489px 0;
 }
 
+.banner {
+  display: none;
+  position: relative;
+  z-index: 99;
+  background-color: #FFF;
+}
+.banner ul {
+  width: 180px;
+  height: 100%;
+  background: #6e6568;
+  padding: 19px 0;
+  position: absolute;
+  left: calc(50% - 605px);
+  top: 0;
+}
+.banner ul li {
+  width: 100%;
+  height: 34px;
+  background: #6e6568;
+  padding-left: 12px;
+  color: #fff;
+}
+.banner ul li a, .banner ul li .wrapper p span, .wrapper p .banner ul li span {
+  font-size: 14px;
+  text-align: start;
+  color: #fff;
+  line-height: 34px;
+  padding: 0 3px;
+}
+
+.he-bottom2:hover .cl {
+  display: block;
+}
+
+.cartlist {
+  position: absolute;
+  left: 250px;
+  top: 0;
+  width: 998px;
+  min-height: 468px;
+  border: 1px solid #f7f7f7;
+  background-color: #e5e5e5;
+  /* box-shadow: 2px 0 5px rgba(0, 0, 0, .3); */
+  display: none;
+  transition: top .3s ease;
+  z-index: 10;
+}
+
+.man {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.man .man1 {
+  display: inline-block;
+  width: 1200px;
+  margin: 0 auto;
+  border-top: solid 1px #DDD;
+  background: #F1F1F1;
+}
+.man .man1 .man2 {
+  display: block;
+  float: left;
+  margin: 6px 13px 6px 15px;
+}
+
+.man2 li {
+  position: relative;
+  z-index: 1;
+  float: left;
+}
+.man2 li a, .man2 li .wrapper p span, .wrapper p .man2 li span {
+  display: block;
+  height: 23px;
+  padding: 0 9px;
+  border: solid 1px #CCC;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 23px;
+  color: #333;
+}
+
+.man3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 146px;
+  display: block;
+  float: left;
+  height: 30px;
+  padding: 6px 14px;
+  margin: 0;
+  line-height: 25px;
+  color: #888;
+  overflow: hidden;
+}
+.man3 input {
+  width: 53px;
+  float: left;
+  height: 23px;
+  padding: 0 2px;
+  text-align: left;
+  border: solid 1px #CCC;
+  font-family: Verdana;
+  color: #AAA;
+  line-height: 23px;
+}
+.man3 .line {
+  float: left;
+  width: 12px;
+  height: 25px;
+}
+
+.man4 {
+  width: 146px;
+  display: block;
+  float: left;
+  height: 25px;
+  padding: 6px 14px;
+  margin: 0;
+  line-height: 25px;
+  color: #888;
+  overflow: hidden;
+}
+.man4 span {
+  margin: 0 5px;
+  float: left;
+}
+
+.man5, .man9, .man8 {
+  position: relative;
+  z-index: 1;
+  display: block;
+  float: left;
+  width: 98px;
+  height: 36px;
+  padding: 6px 0;
+  border: solid #E7E7E7;
+  border-width: 0 1px;
+  margin-left: -1px;
+}
+.man5 .man6, .man9 .man6, .man8 .man6 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  padding: 6px 14px;
+}
+.man5 .man6 span, .man9 .man6 span, .man8 .man6 span {
+  display: block;
+  float: left;
+  color: #888;
+  line-height: 25px;
+}
+.man5 .man6 i, .man9 .man6 i, .man8 .man6 i {
+  display: block;
+  float: left;
+  width: 13px;
+  height: 7px;
+  background: url(../img/search.ele.png) no-repeat 0 0;
+  margin: 9px 0 0 7px;
+}
+
+.man7 {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 37px;
+  left: -1px;
+  right: -1px;
+  border: solid #E7E7E7;
+  border-width: 0 1px 1px 1px;
+  background-color: #FFF;
+}
+.man7 ul {
+  display: block;
+  list-style: none outside none;
+}
+.man7 ul li {
+  display: block;
+  clear: both;
+}
+.man7 ul li a, .man7 ul li .wrapper p span, .wrapper p .man7 ul li span {
+  display: block;
+  height: 35px;
+  padding: 6px 14px;
+  text-align: left;
+  color: #888;
+}
+
+.man6:hover {
+  background: #fff;
+  border: solid 1px #E5E5E5;
+  border-top: #fff;
+}
+
+.man5:hover .man7, .man9:hover .man7, .man8:hover .man7 {
+  display: block;
+}
+
+.man6:hover .ii {
+  transform: rotate(180deg);
+  transition: 1s;
+}
+
+.man9 {
+  width: 100px;
+}
+
+.man9:hover .i1 {
+  transform: rotate(180deg);
+  transition: 1s;
+}
+
+.man8 {
+  width: 100px;
+}
+
+.man8:hover .i1 {
+  transform: rotate(180deg);
+  transition: 1s;
+}
+
+.fold, .fold1 {
+  display: block;
+  float: left;
+  height: 25px;
+  padding: 6px 14px;
+  margin: 0;
+  line-height: 25px;
+  color: #888;
+  overflow: hidden;
+}
+.fold span, .fold1 span {
+  display: block;
+  cursor: pointer;
+  line-height: 25px;
+  color: #888;
+}
+.fold span i, .fold1 span i {
+  background: #fff 999px 999px;
+  cursor: pointer;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #e4e4e4;
+  margin-right: 5px;
+  display: inline-block;
+}
+
 .list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 1160px;
-  margin: 0 auto;
+  margin: 20px auto;
   font-size: 14px;
 }
 
@@ -961,7 +1218,6 @@
   padding: 10px;
   float: left;
   margin: 0 10px 10px 0;
-  border: 1px solid #ccc;
   height: 310px;
   position: relative;
 }
@@ -1002,7 +1258,7 @@
   width: 55px;
   height: 38px;
   line-height: 38px;
-  background: pink;
+  background: #F30213;
   color: #fff;
   font-size: 14px;
   border: 1px solid pink;
