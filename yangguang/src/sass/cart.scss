@@ -69,17 +69,29 @@ textarea {
     resize: none;
 }
 
-article， aside， details， figcaption， figure， footer， header， hgroup， menu， nav， section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
 img {
     display: block;
     height: auto;
-    vertical-align: top;
 }
 
-.video embed， .video object， .video iframe {
+.video,
+embed,
+.video object,
+.video iframe {
     width: 100%;
     height: auto;
 }
@@ -587,7 +599,7 @@ i {
     color: #666;
     margin: 0;
     background: #fff;
-    float: left;
+    // float: left;
 }
 
 .quantity-form .quantity-down {
@@ -690,7 +702,7 @@ i {
     display: inline-block;
     width: 110px;
     height: 20px;
-    float: left;
+    // float: left;
     text-align: left;
 }
 

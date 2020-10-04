@@ -10,7 +10,7 @@ define(['pagination', 'jlazyload'], function() {
 
 
             $.ajax({
-                url: 'http://192.168.13.7/yangguang/tian/yangguang/php/listdata.php',
+                url: ' http://192.168.13.7/yangguang/tian/yangguang/php/listdata.php',
                 dataType: 'json'
             }).done(function(data) {
                 let $strhtml = '<ul>';
@@ -42,52 +42,53 @@ define(['pagination', 'jlazyload'], function() {
 
 
             // 分页
-            $(function() {
-                $('.page').pagination({
-                    pageCount: 3,
-                    jump: true,
-                    coping: true,
-                    prevContent: '上一页',
-                    nextContent: '下一页',
-                    homePage: '首页',
-                    endPage: '尾页',
-                    callback: function(api) {
-                        console.log(api.getCurrent());
-                        $.ajax({
-                            url: 'http://192.168.13.7/yangguang/tian/yangguang/php/listdata.php',
-                            data: {
-                                page: api.getCurrent()
-                            },
-                            dataType: 'json'
-                        }).done(function(data) {
-                            let $strhtml = '<ul>';
-                            $.each(data, function(index, value) {
-                                $strhtml += `
-                    <li>
-                        <a href="detail.html?sid=${value.sid}" target="_blank">
-                            <img src="${value.url}"/>
-                            <p>${value.sid}${value.title}</p>
-                            <span class="price">￥${value.price}</span>
-                            <span>${value.sailnumber}</span>
-                            <span>${value.comment}</span>
-                        </a>
-                    </li>
-                `;
-                            });
-                            $strhtml += '</ul>';
-                            $list.html($strhtml);
-                            array_default = [];
-                            array = [];
-                            prev = null;
-                            next = null;
-                            $('.list li').each(function(index, element) {
-                                array[index] = $(this);
-                                array_default[index] = $(this);
-                            });
+
+            $('.page').pagination({
+                pageCount: 3,
+                jump: true,
+                coping: true,
+                prevContent: '上一页',
+                nextContent: '下一页',
+                homePage: '首页',
+                endPage: '尾页',
+                callback: function(api) {
+                    console.log(api.getCurrent());
+                    $.ajax({
+                        url: ' http://192.168.13.7/yangguang/tian/yangguang/php/listdata.php',
+                        data: {
+                            page: api.getCurrent()
+                        },
+
+                        dataType: 'json'
+                    }).done(function(data) {
+                        let $strhtml = '<ul>';
+                        $.each(data, function(index, value) {
+                            $strhtml += `
+                                <li>
+                                    <a href="detail.html?sid=${value.sid}" target="_blank">
+                                    <img src="${value.url}"/>
+                                    <p>${value.sid}${value.title}</p>
+                                    <span class="price">￥${value.price}</span>
+                                    <span>${value.sailnumber}</span>
+                                    <span>${value.comment}</span>
+                                    </a>
+                                </li>
+                            `;
                         });
-                    }
-                });
-            })
+                        $strhtml += '</ul>';
+                        $list.html($strhtml);
+                        array_default = [];
+                        array = [];
+                        prev = null;
+                        next = null;
+                        $('.list li').each(function(index, element) {
+                            array[index] = $(this);
+                            array_default[index] = $(this);
+                        });
+                    });
+                }
+            });
+
 
 
             // 默认排序

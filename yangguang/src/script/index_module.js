@@ -5,7 +5,7 @@ define([], function() {
             $(function() {
                 const $list = $('.like-inner ul');
                 $.ajax({
-                        url: 'http://192.168.13.45/yangguang/tian/yangguang/php/jingdong.php',
+                        url: 'http://192.168.13.7/yangguang/tian/yangguang/php/jingdong.php',
                         dataType: 'json'
                     })
                     .done((data) => {
@@ -84,7 +84,7 @@ define([], function() {
             $(function() {
                 const $list = $('.seckill-content .wrapp ');
                 $.ajax({
-                        url: 'http://192.168.13.45/yangguang/tian/yangguang/php/jingdong.php',
+                        url: 'http://192.168.13.7/yangguang/tian/yangguang/php/jingdong.php',
                         dataType: 'json'
                     })
                     .done((data) => {

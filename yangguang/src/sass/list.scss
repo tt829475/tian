@@ -16,6 +16,14 @@
     align-items: $d;
 }
 
+@mixin style($s, $a, $f, $c, $l) {
+    font-size: $s;
+    text-align: $a;
+    font-family: $f;
+    color: $c;
+    line-height: $l;
+}
+
 .banner {
     display: none;
     position: relative;
@@ -44,14 +52,11 @@
 }
 
 .cartlist {
+    @include size(998px, 468px, #e5e5e5);
     position: absolute;
     left: 250px;
     top: 0;
-    width: 998px;
-    min-height: 468px;
     border: 1px solid #f7f7f7;
-    background-color: #e5e5e5;
-    /* box-shadow: 2px 0 5px rgba(0, 0, 0, .3); */
     display: none;
     transition: top .3s ease;
     z-index: 10;
@@ -104,15 +109,11 @@
     color: #888;
     overflow: hidden;
     input {
-        width: 53px;
+        @include size(53px, 23px, null);
+        @include style(12px, left, Verdana, #AAA, 23px);
         float: left;
-        height: 23px;
         padding: 0 2px;
-        text-align: left;
         border: solid 1px #CCC;
-        font-family: Verdana;
-        color: #AAA;
-        line-height: 23px;
     }
     .line {
         float: left;
@@ -297,6 +298,21 @@
 
 .list li span {
     display: block;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    max-width: 160px;
+    overflow: hidden;
+}
+
+.list li span {
+    height: 14px;
+    padding: 0px 2px;
+    margin-top: 4px;
+    margin-right: 6px;
+    border-radius: 2px;
+    font-size: 11px;
+    color: #f30213;
+    line-height: 14px;
 }
 
 .pagelist {
@@ -313,39 +329,30 @@
 }
 
 .m-style .active {
+    @include size(55px, 38px, #F30213);
     float: left;
     margin: 0 5px;
-    width: 55px;
-    height: 38px;
     line-height: 38px;
-    background: #F30213;
     color: #fff;
     font-size: 14px;
     border: 1px solid pink;
 }
 
 .m-style a {
+    @include size(55px, 38px, #fff);
     float: left;
     margin: 0 5px;
-    width: 55px;
-    height: 38px;
     line-height: 38px;
-    background: #fff;
     border: 1px solid #ebebeb;
     color: #bdbdbd;
     font-size: 14px;
 }
 
 input {
+    @include size(38px, 38px, #fff);
+    @include style(14px, center, null, #bdbdbd, 38px);
     float: left;
     margin: 0 5px;
-    width: 38px;
-    height: 38px;
-    line-height: 38px;
-    text-align: center;
-    background: #fff;
     border: 1px solid #ebebeb;
     outline: none;
-    color: #bdbdbd;
-    font-size: 14px;
 }

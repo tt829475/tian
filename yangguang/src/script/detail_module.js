@@ -13,7 +13,7 @@ define(['jcookie'], function(require, factory) {
                     $datasid = 1
                 }
                 $.ajax({ //通过ajax传给后端
-                        url: "http://192.168.13.7/yangguang/tian/yangguang/php/getsid.php",
+                        url: " http://192.168.13.7/yangguang/tian/yangguang/php/getsid.php",
                         data: {
                             sid: $datasid
                         },

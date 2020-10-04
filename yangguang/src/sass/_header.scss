@@ -357,7 +357,7 @@
     }
 }
 
-.cart {
+.carte {
     @include size(140px, 36px, #fff);
     @include border(1px, 1px, 1px, 1px);
     @include border-color(solid, #ddd);
@@ -365,7 +365,7 @@
     height: 36px;
     margin-top: 34px;
     margin-left: 30px;
-    .car1 {
+    .care1 {
         @include flexbox(flex, row, center, center);
         @include size(null, 36px, #f9f9f9);
         @include border(1px, 1px, 1px, 1px);

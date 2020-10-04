@@ -7,8 +7,8 @@
     <meta name="keywords" content="央广小品 - 央广购物，电视购物，央广，网上购物，视频购物，视频直播，TV购物，QVC，美国QVC">
     <meta name="description" content="央广小品 - （cnrmall.com）-是由中央人民广播电台和美国QVC联合打造的居家购物公司，获国家广电总局批准的电视购物频道，24小时客服热线:4008-518-518">
     <title>央广购物</title>
-    <script src="script/require.js" data-main="script/main.js" defer async="true" id="currentpage" data-page="index_module"></script>
-    <link rel="stylesheet" href="./css/login.css">
+    <script src="script/require.js" data-main="script/main.js" defer async="true" id="currentpage" data-page="registry_module"></script>
+    <link rel="stylesheet" href="./css/registry.css">
 </head>
 
 <body>
@@ -26,7 +26,16 @@
     <div class="nc-register-bg">
         <div class="nc-register-box">
             <div class="nc-register-layout">
-
+                <fieldset style="width:800px;margin:0 auto;">
+                    <legend>用户注册</legend>
+                    <form action="http://192.168.13.7/yangguang/tian/yangguang/php/registry.php" method="post">
+                        <p><label for="">用户姓名：</label><input type="text" name="username" class="username"><span></span></p>
+                        <p><label for="">用户密码：</label><input type="password" name="password"></p>
+                        <p><label for="">确认密码：</label><input type="password" name="repass"></p>
+                        <p><label for="">用户邮箱：</label><input type="text" name="email"></p>
+                        <p><input type="submit" value="用户注册" name="submit"></p>
+                    </form>
+                </fieldset>
             </div>
         </div>
     </div>
