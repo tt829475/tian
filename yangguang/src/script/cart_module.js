@@ -1,18 +1,6 @@
 define(['jcookie'], function(require, factory) {
     return {
         init: function() {
-            //获取cookie的商品和数量
-            // if ($.cookie('cookiesid') && $.cookie('cookienum')) {
-            //     let sidarr = $.cookie('cookiesid').split(',');
-            //     let numarr = $.cookie('cookienum').split(',');
-            //     console.log(sidarr);
-            //     console.log(numarr);
-            //     for (let i = 0; i < sidarr.length; i++) {
-            //         renderlist(sidarr[i], numarr[i])
-            //     }
-            // }
-
-
             //渲染
             function showlist(sid, num) {
                 $.ajax({
@@ -27,11 +15,10 @@ define(['jcookie'], function(require, factory) {
                             $clonebox.find('.goods-d-info').find('a').html(value.title);
                             $clonebox.find('.b-price').find('strong').html(value.price);
                             $clonebox.find('.quantity-form').find('input').val(num);
-                            //计算单个商品的价格
                             $clonebox.find('.b-sum').find('strong').html((value.price * num).toFixed(2));
                             $clonebox.css('display', 'block');
                             $('.item-list').append($clonebox);
-                            calcprice(); //计算总价
+                            calcprice()
                         }
                     });
 
@@ -59,11 +46,11 @@ define(['jcookie'], function(require, factory) {
                 });
             }
 
-            //4.全选
+            //全选
             $('.allsel').on('change', function() {
                 $('.goods-item:visible').find(':checkbox').prop('checked', $(this).prop('checked'));
                 $('.allsel').prop('checked', $(this).prop('checked'));
-                calcprice(); //计算总价
+                calcprice();
             });
             let $inputs = $('.goods-item:visible').find(':checkbox');
             $('.item-list').on('change', $inputs, function() {
@@ -73,17 +60,17 @@ define(['jcookie'], function(require, factory) {
                 } else {
                     $('.allsel').prop('checked', false);
                 }
-                calcprice(); //计算总价
+                calcprice();
             });
 
-            //5.改变数量
+            //改变数量
             $('.quantity-add').on('click', function() {
                 let $num = $(this).parents('.goods-item').find('.quantity-form input').val();
                 $num++;
                 $(this).parents('.goods-item').find('.quantity-form input').val($num);
 
                 $(this).parents('.goods-item').find('.b-sum strong').html(calcsingleprice($(this)));
-                calcprice(); //计算总价
+                calcprice();
                 setcookie($(this));
             });
 
@@ -96,7 +83,7 @@ define(['jcookie'], function(require, factory) {
                 }
                 $(this).parents('.goods-item').find('.quantity-form input').val($num);
                 $(this).parents('.goods-item').find('.b-sum strong').html(calcsingleprice($(this)));
-                calcprice(); //计算总价
+                calcprice()
                 setcookie($(this));
             });
 
@@ -108,19 +95,19 @@ define(['jcookie'], function(require, factory) {
                     $(this).val(1);
                 }
                 $(this).parents('.goods-item').find('.b-sum strong').html(calcsingleprice($(this)));
-                calcprice(); //计算总价
+                calcprice();
                 setcookie($(this));
             });
 
             //计算单价
-            function calcsingleprice(obj) { //obj元素对象
+            function calcsingleprice(obj) {
                 let $dj = parseFloat(obj.parents('.goods-item').find('.b-price strong').html());
                 let $num = parseInt(obj.parents('.goods-item').find('.quantity-form input').val());
                 return ($dj * $num).toFixed(2)
             }
 
 
-            //将改变后的数量存放到cookie中
+            //将改变后的数量存放到cookie当中
             let arrsid = []; //存储商品的编号。
             let arrnum = []; //存储商品的数量。
             function cookietoarray() {
@@ -141,7 +128,7 @@ define(['jcookie'], function(require, factory) {
             }
 
 
-            //6.删除
+            //删除
             function delcookie(sid, arrsid) {
                 let $index = -1;
                 $.each(arrsid, function(index, value) {
@@ -157,23 +144,23 @@ define(['jcookie'], function(require, factory) {
             }
             $('.b-action a').on('click', function() {
                 cookietoarray();
-                if (window.confirm('你确定要删除吗?')) {
+                if (window.confirm('您确定要删除商品吗?')) {
                     $(this).parents('.goods-item').remove();
                     delcookie($(this).parents('.goods-item').find('img').attr('sid'), arrsid);
-                    calcprice(); //计算总价
+                    calcprice();
                 }
             });
 
             $('.operation a').on('click', function() {
                 cookietoarray();
-                if (window.confirm('你确定要全部删除吗?')) {
+                if (window.confirm('您确定要删除全部的商品吗?')) {
                     $('.goods-item:visible').each(function() {
                         if ($(this).find(':checkbox').is(':checked')) {
                             $(this).remove();
                             delcookie($(this).find('img').attr('sid'), arrsid);
                         }
                     });
-                    calcprice(); //计算总价
+                    calcprice();
                 }
             });
         }

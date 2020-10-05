@@ -2,6 +2,12 @@
 @import "header";
 @import "ccti";
 @import "footer";
+@mixin size($w, $h, $b) {
+    width: $w;
+    height: $h;
+    background: $b;
+}
+
 body,
 div,
 dl,
@@ -132,7 +138,7 @@ i {
 }
 
 .w {
-    width: 990px;
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -182,10 +188,8 @@ i {
 }
 
 .cart-search #btn {
-    width: 48px;
-    height: 24px;
+    @include size(48px, 24px, #c91623);
     float: left;
-    background: #c91623;
     color: white;
     text-align: center;
     font-weight: 700;
@@ -278,9 +282,7 @@ i {
 }
 
 .footline .line {
-    width: 80px;
-    height: 2px;
-    background: #e4393c;
+    @include size(80px, 2px, #e4393c);
     position: absolute;
     z-index: 2;
 }
@@ -545,23 +547,23 @@ i {
 }
 
 .b-price {
-    width: 120px;
+    width: 145px;
     padding: 15px 40px 10px 0;
     overflow: hidden;
     text-align: right;
 }
 
 .b-price .sales-promotion {
+    @include size(53px, 18px, #fff);
     display: block;
-    width: 53px;
     border: 1px solid #f9d2d3;
+    margin-left: 10px;
+    margin-top: -2px;
     color: #e4393c;
-    height: 18px;
     text-align: left;
     line-height: 17px;
     padding: 0 15px 0 8px;
     cursor: pointer;
-    background: #fff;
     text-decoration: none;
     float: right;
     overflow: hidden;
@@ -590,16 +592,14 @@ i {
 }
 
 .quantity-form a {
+    @include size(20px, 18px, #fff);
     display: inline-block;
-    height: 18px;
     line-height: 18px;
     padding: 1px 0;
-    width: 16px;
     text-align: center;
     color: #666;
     margin: 0;
-    background: #fff;
-    // float: left;
+    float: left;
 }
 
 .quantity-form .quantity-down {
@@ -611,11 +611,9 @@ i {
 }
 
 .quantity-form input {
-    width: 44px;
-    height: 22px;
+    @include size(38px, 22px, #fff);
     float: left;
     text-align: center;
-    background: white;
 }
 
 .quantity-text {
@@ -648,10 +646,8 @@ i {
 }
 
 #cart-floatbar {
-    width: 988px;
-    height: 50px;
+    @include size(998px, 50px, #fff);
     border: 1px solid #f0f0f0;
-    background: #fff;
     position: relative;
 }
 
@@ -702,7 +698,7 @@ i {
     display: inline-block;
     width: 110px;
     height: 20px;
-    // float: left;
+    float: left;
     text-align: left;
 }
 
@@ -778,21 +774,17 @@ i {
 }
 
 .goods-list-tab .s-item {
+    @include size(8px, 8px, #aaa);
     display: inline-block;
-    width: 8px;
-    height: 8px;
     margin-left: 3px;
     overflow: hidden;
-    background: #aaa;
     border-radius: 4px;
 }
 
-
-/*
-.s-item:hover{
-		width: 26px;
-	background: #e4393c;
-}*/
+.s-item:hover {
+    width: 26px;
+    background: #e4393c;
+}
 
 .goods-list-tab .tab-selected {
     width: 26px;
@@ -923,17 +915,14 @@ i {
 }
 
 .slider-page-btn a {
+    @include size(28px, 62px, rgba(0, 0, 0, .2));
     position: absolute;
     display: block;
     top: 50%;
     margin-top: -31px;
     z-index: 3;
     display: block;
-    width: 28px;
-    height: 62px;
     line-height: 62px;
-    background: gray;
-    background: rgba(0, 0, 0, .2);
     color: #fff;
     text-align: center;
     font-size: 22px;

@@ -928,7 +928,7 @@ i {
 }
 
 .w {
-  width: 990px;
+  width: 1100px;
   margin: 0 auto;
 }
 
@@ -980,8 +980,8 @@ i {
 .cart-search #btn {
   width: 48px;
   height: 24px;
-  float: left;
   background: #c91623;
+  float: left;
   color: white;
   text-align: center;
   font-weight: 700;
@@ -1341,23 +1341,25 @@ i {
 }
 
 .b-price {
-  width: 120px;
+  width: 145px;
   padding: 15px 40px 10px 0;
   overflow: hidden;
   text-align: right;
 }
 
 .b-price .sales-promotion {
-  display: block;
   width: 53px;
-  border: 1px solid #f9d2d3;
-  color: #e4393c;
   height: 18px;
+  background: #fff;
+  display: block;
+  border: 1px solid #f9d2d3;
+  margin-left: 10px;
+  margin-top: -2px;
+  color: #e4393c;
   text-align: left;
   line-height: 17px;
   padding: 0 15px 0 8px;
   cursor: pointer;
-  background: #fff;
   text-decoration: none;
   float: right;
   overflow: hidden;
@@ -1386,15 +1388,16 @@ i {
 }
 
 .quantity-form a, .quantity-form .wrapper p span, .wrapper p .quantity-form span {
-  display: inline-block;
+  width: 20px;
   height: 18px;
+  background: #fff;
+  display: inline-block;
   line-height: 18px;
   padding: 1px 0;
-  width: 16px;
   text-align: center;
   color: #666;
   margin: 0;
-  background: #fff;
+  float: left;
 }
 
 .quantity-form .quantity-down {
@@ -1406,11 +1409,11 @@ i {
 }
 
 .quantity-form input {
-  width: 44px;
+  width: 38px;
   height: 22px;
+  background: #fff;
   float: left;
   text-align: center;
-  background: white;
 }
 
 .quantity-text {
@@ -1443,10 +1446,10 @@ i {
 }
 
 #cart-floatbar {
-  width: 988px;
+  width: 998px;
   height: 50px;
-  border: 1px solid #f0f0f0;
   background: #fff;
+  border: 1px solid #f0f0f0;
   position: relative;
 }
 
@@ -1497,6 +1500,7 @@ i {
   display: inline-block;
   width: 110px;
   height: 20px;
+  float: left;
   text-align: left;
 }
 
@@ -1572,20 +1576,20 @@ i {
 }
 
 .goods-list-tab .s-item {
-  display: inline-block;
   width: 8px;
   height: 8px;
+  background: #aaa;
+  display: inline-block;
   margin-left: 3px;
   overflow: hidden;
-  background: #aaa;
   border-radius: 4px;
 }
 
-/*
-.s-item:hover{
-		width: 26px;
-	background: #e4393c;
-}*/
+.s-item:hover {
+  width: 26px;
+  background: #e4393c;
+}
+
 .goods-list-tab .tab-selected {
   width: 26px;
   background: #e4393c;
@@ -1715,17 +1719,16 @@ i {
 }
 
 .slider-page-btn a, .slider-page-btn .wrapper p span, .wrapper p .slider-page-btn span {
+  width: 28px;
+  height: 62px;
+  background: rgba(0, 0, 0, 0.2);
   position: absolute;
   display: block;
   top: 50%;
   margin-top: -31px;
   z-index: 3;
   display: block;
-  width: 28px;
-  height: 62px;
   line-height: 62px;
-  background: gray;
-  background: rgba(0, 0, 0, 0.2);
   color: #fff;
   text-align: center;
   font-size: 22px;

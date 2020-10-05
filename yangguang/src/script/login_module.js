@@ -12,7 +12,7 @@ define(['sha1'], function(require, factory) {
 
                 }).done(function(result) {
                     if (result) {
-                        location.href = "index.html";
+                        location.href = "index1.html";
                         localStorage.setItem('username', $('username').val());
                     } else {
                         $('.password').val('');

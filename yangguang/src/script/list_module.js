@@ -21,8 +21,8 @@ define(['pagination', 'jlazyload'], function() {
                                 <img src="${value.url}" width="200" height="200"/>
                                 <p>${value.sid}${value.title}</p>
                                 <span class="price">￥${value.price}</span>
-                                <span>${value.sailnumber}</span>
-                                <span>${value.comment}</span>
+                                <span class="sailnumber">${value.sailnumber}销量</span>
+                                <span class="comment">${value.comment}条评论</span>
                             </a>
                         </li>
                     `;
@@ -42,7 +42,6 @@ define(['pagination', 'jlazyload'], function() {
 
 
             // 分页
-
             $('.page').pagination({
                 pageCount: 3,
                 jump: true,
@@ -89,8 +88,6 @@ define(['pagination', 'jlazyload'], function() {
                 }
             });
 
-
-
             // 默认排序
             $('button').eq(0).on('click', function() {
                 $.each(array_default, function(index, value) {
@@ -98,24 +95,26 @@ define(['pagination', 'jlazyload'], function() {
                 });
                 return;
             });
-            //升序
+
+            //销量
             $('button').eq(1).on('click', function() {
-                    for (let i = 0; i < array.length - 1; i++) {
-                        for (let j = 0; j < array.length - i - 1; j++) {
-                            prev = parseFloat(array[j].find('.price').html().substring(1));
-                            next = parseFloat(array[j + 1].find('.price').html().substring(1));
-                            if (prev > next) {
-                                let temp = array[j];
-                                array[j] = array[j + 1];
-                                array[j + 1] = temp;
-                            }
+                for (let i = 0; i < array.length - 1; i++) {
+                    for (let j = 0; j < array.length - i - 1; j++) {
+                        prev = parseFloat(array[j].find('.sailnumber').html().substring(0));
+                        next = parseFloat(array[j + 1].find('.sailnumber').html().substring(0));
+                        if (prev < next) {
+                            let temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
                         }
                     }
-                    $.each(array, function(index, value) {
-                        $('.list ul').append(value);
-                    })
+                }
+                $.each(array, function(index, value) {
+                    $('.list ul').append(value);
                 })
-                // 降序
+            });
+
+            // 降序
             $('button').eq(2).on('click', function() {
                 for (let i = 0; i < array.length - 1; i++) {
                     for (let j = 0; j < array.length - i - 1; j++) {
@@ -131,6 +130,52 @@ define(['pagination', 'jlazyload'], function() {
                 $.each(array, function(index, value) {
                     $('.list ul').append(value);
                 })
+            });
+
+            //评论
+            $('button').eq(3).on('click', function() {
+                for (let i = 0; i < array.length - 1; i++) {
+                    for (let j = 0; j < array.length - i - 1; j++) {
+                        prev = parseFloat(array[j].find('.comment').html().substring(0));
+                        next = parseFloat(array[j + 1].find('.comment').html().substring(0));
+                        if (prev < next) {
+                            let temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
+                    }
+                }
+                $.each(array, function(index, value) {
+                    $('.list ul').append(value);
+                })
+            });
+
+
+            //顶部悬浮
+            $(function() {
+                const $nav = $('.man1');
+                //触发滚轮事件
+                $(window).on('scroll', function() {
+                    let $top = $(window).scrollTop(); //获取滚动条的top值。
+
+                    if ($top >= 200) {
+                        $nav.stop(true).animate({
+                            top: 0
+
+                        });
+                        $nav.css({
+                            position: 'fixed',
+                            width: '100%',
+                        })
+                    } else {
+
+                        $nav.css({
+                            position: 'relative',
+                            width: '90%',
+
+                        })
+                    }
+                });
             });
 
             // 二级菜单

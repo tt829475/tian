@@ -104,4 +104,28 @@ img {
   overflow: hidden;
 }
 
+.footer {
+  padding-top: 30px;
+  font-size: 12px !important;
+  text-align: center;
+  clear: both;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  overflow: hidden;
+  background-color: #343a3a;
+}
+.footer .footer1 {
+  width: 1200px;
+  margin: auto;
+}
+.footer .footer1 p {
+  color: #eeeeee;
+  word-spacing: 5px;
+  padding: 15px 0 0;
+}
+.footer .footer1 p a {
+  color: #eeeeee;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=registry.css.map */
