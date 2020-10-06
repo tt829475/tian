@@ -157,3 +157,73 @@ i[class*="icon-"] {
         }
     }
 }
+
+form {
+    display: block;
+    margin-top: 55px;
+}
+
+legend {
+    float: left;
+    width: 100%;
+    height: 54px;
+    color: #E4393C;
+    font-weight: 700;
+}
+
+.p1 {
+    width: 315px;
+    height: 38px;
+    border: 1px solid #bdbdbd;
+    position: relative;
+    margin-bottom: 22px;
+    z-index: 1;
+    label {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 38px;
+        height: 38px;
+        border-right: 1px solid #bdbdbd;
+        background: url(../img/login_pic.png) no-repeat;
+        background-position: 0 -110px;
+    }
+    input {
+        overflow: hidden;
+        float: none;
+        width: 254px;
+        height: 18px;
+        min-height: 18px;
+        padding: 10px 0 10px 50px;
+        border: 0;
+        font-family: '\5b8b\4f53';
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.p2 {
+    @extend .p1;
+    label {
+        background-position: -48px -110px;
+    }
+}
+
+.p3 {
+    width: 306px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(22, 189, 83, 1);
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 400;
+    color: rgba(108, 108, 108, 1);
+    cursor: pointer;
+    a {
+        color: #b61d1d;
+        margin-left: 20px;
+    }
+}

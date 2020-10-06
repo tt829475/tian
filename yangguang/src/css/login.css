@@ -157,4 +157,71 @@ i[class*="icon-"] {
   text-decoration: none;
 }
 
+form {
+  display: block;
+  margin-top: 55px;
+}
+
+legend {
+  float: left;
+  width: 100%;
+  height: 54px;
+  color: #E4393C;
+  font-weight: 700;
+}
+
+.p1, .p2 {
+  width: 315px;
+  height: 38px;
+  border: 1px solid #bdbdbd;
+  position: relative;
+  margin-bottom: 22px;
+  z-index: 1;
+}
+.p1 label, .p2 label {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-right: 1px solid #bdbdbd;
+  background: url(../img/login_pic.png) no-repeat;
+  background-position: 0 -110px;
+}
+.p1 input, .p2 input {
+  overflow: hidden;
+  float: none;
+  width: 254px;
+  height: 18px;
+  min-height: 18px;
+  padding: 10px 0 10px 50px;
+  border: 0;
+  font-family: '\5b8b\4f53';
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.p2 label {
+  background-position: -48px -110px;
+}
+
+.p3 {
+  width: 306px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #16bd53;
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 400;
+  color: #6c6c6c;
+  cursor: pointer;
+}
+.p3 a {
+  color: #b61d1d;
+  margin-left: 20px;
+}
+
 /*# sourceMappingURL=login.css.map */
