@@ -156,7 +156,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 87px;
+  width: 92px;
   height: 106px;
   background: #FFF;
   position: absolute;
@@ -217,7 +217,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 175px;
+  width: 200px;
   background: #fff;
   padding: 10px;
   position: absolute;
@@ -286,12 +286,12 @@
 }
 
 .top2 {
-  left: -89px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  top: -210px;
+  top: -247px;
+  left: -109px;
 }
 .top2 img {
   width: 140px;
@@ -435,7 +435,7 @@
 }
 
 .carte {
-  width: 140px;
+  width: 146px;
   height: 36px;
   background: #fff;
   border-top: 1px;
@@ -985,7 +985,7 @@
   height: 468px;
   background: #e5e5e5;
   position: absolute;
-  left: 250px;
+  left: 323px;
   top: 0;
   border: 1px solid #f7f7f7;
   display: none;
@@ -1159,7 +1159,7 @@
 }
 
 .man9 {
-  width: 100px;
+  width: 110px;
 }
 
 .man9:hover .i1 {
@@ -1168,7 +1168,7 @@
 }
 
 .man8 {
-  width: 100px;
+  width: 110px;
 }
 
 .man8:hover .i1 {
@@ -1218,7 +1218,7 @@
   padding: 10px;
   float: left;
   margin: 0 10px 10px 0;
-  height: 310px;
+  height: 320px;
   position: relative;
 }
 

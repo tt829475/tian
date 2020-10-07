@@ -160,7 +160,7 @@ i[class*="icon-"] {
 
 form {
     display: block;
-    margin-top: 55px;
+    margin-top: 56px;
 }
 
 legend {
@@ -169,14 +169,15 @@ legend {
     height: 54px;
     color: #E4393C;
     font-weight: 700;
+    font-size: 20px;
 }
 
 .p1 {
-    width: 315px;
-    height: 38px;
+    width: 304px;
+    height: 39px;
     border: 1px solid #bdbdbd;
     position: relative;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     z-index: 1;
     label {
         position: absolute;

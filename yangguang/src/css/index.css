@@ -156,7 +156,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 87px;
+  width: 92px;
   height: 106px;
   background: #FFF;
   position: absolute;
@@ -217,7 +217,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 175px;
+  width: 200px;
   background: #fff;
   padding: 10px;
   position: absolute;
@@ -286,12 +286,12 @@
 }
 
 .top2 {
-  left: -89px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  top: -210px;
+  top: -247px;
+  left: -109px;
 }
 .top2 img {
   width: 140px;
@@ -435,7 +435,7 @@
 }
 
 .carte {
-  width: 140px;
+  width: 146px;
   height: 36px;
   background: #fff;
   border-top: 1px;
@@ -620,6 +620,7 @@
   width: 167px;
   height: 79px;
   float: left;
+  margin-left: 80px;
 }
 
 .sinatv-le1, .sinatv-le2 {
@@ -630,6 +631,7 @@
   margin: 5px 6px 5px 15px;
   position: relative;
   float: left;
+  left: 90px;
 }
 .sinatv-le1 .img1, .sinatv-le2 .img1 {
   width: 50%;
@@ -776,7 +778,7 @@ h3 {
   min-height: 468px;
   border: 1px solid #f7f7f7;
   background-color: #e5e5e5;
-  /* box-shadow: 2px 0 5px rgba(0, 0, 0, .3); */
+  left: 324px;
   display: none;
   transition: top .3s ease;
   z-index: 10;
@@ -1590,6 +1592,8 @@ h3 {
 
 .like-inner {
   overflow: hidden;
+  width: 1210px;
+  margin: 15px auto 0 auto;
 }
 
 .like-list li {

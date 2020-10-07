@@ -143,7 +143,7 @@
 
 .sp {
     @include flexbox(flex, row, center, center);
-    @include size(87px, 106px, #FFF);
+    @include size(92px, 106px, #FFF);
     position: absolute;
     z-index: 1;
     opacity: 1;
@@ -190,7 +190,7 @@
 
 .top {
     @include flexbox(flex, row, center, center);
-    @include size(175px, null, #fff);
+    @include size(200px, null, #fff);
     padding: 10px;
     position: absolute;
     left: -1px;
@@ -262,9 +262,9 @@
 
 .top2 {
     @extend .top;
-    left: -89px;
     @include flexbox(flex, column, flex-end, flex-start);
-    top: -210px;
+    top: -247px;
+    left: -109px;
     img {
         width: 140px;
     }
@@ -358,7 +358,7 @@
 }
 
 .carte {
-    @include size(140px, 36px, #fff);
+    @include size(146px, 36px, #fff);
     @include border(1px, 1px, 1px, 1px);
     @include border-color(solid, #ddd);
     // z-index: 11;

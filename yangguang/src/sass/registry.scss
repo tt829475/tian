@@ -127,3 +127,61 @@ img {
         }
     }
 }
+
+legend {
+    word-spacing: -1em;
+    border-bottom: solid 1px #E6E6E6;
+    font-size: 20px;
+    color: #999;
+    line-height: 24px;
+    padding-bottom: 13px;
+    position: relative;
+    z-index: 1;
+}
+
+.bb {
+    background-color: #FFF;
+    width: 590px;
+    height: 52px;
+    margin-top: 10px;
+    border: solid 1px #E6E6E6;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px;
+    label {
+        font-size: 14px;
+        line-height: 20px;
+        color: #666;
+        width: 88px;
+        padding: 16px 0 16px 20px;
+        float: left;
+    }
+    input {
+        font-family: "microsoft yahei";
+        font-size: 14px;
+        line-height: 28px;
+        width: 290px;
+        height: 28px;
+        padding: 0;
+        border: none 0;
+        margin-top: 12px;
+    }
+}
+
+.sub {
+    border: 0px solid #fff;
+    .su {
+        width: 306px;
+        height: 40px;
+        border-radius: 20px;
+        border: 1px solid rgba(22, 189, 83, 1);
+        margin-left: 130px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 40px;
+        font-weight: 400;
+        color: rgba(108, 108, 108, 1);
+        cursor: pointer;
+        background: #fff;
+    }
+}
