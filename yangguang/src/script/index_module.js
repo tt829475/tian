@@ -14,7 +14,7 @@ define([], function() {
                         $.each($renderdata, function(index, value) {
                             $strhtml += `
                                 <li>
-                                    <a href="index1.html?sid=${value.sid}" target="_blank">
+                                    <a href="detail.html?sid=${value.sid}" target="_blank">
                                     <img class="lazy" data-original="${value.url}" width="200" height="200"/>
                                     <p>${value.sid}${value.title}</p>
                                     <span class="price">￥${value.price}</span>
